@@ -17,3 +17,50 @@
 /* Colores */
 
 /* ******************************** */
+html{
+  font-size: 100%;
+}
+body {
+  background-color: red;
+}
+header,footer{
+  height: 10%;
+}
+.bodywrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+main{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-grow: 1;
+}
+.main__hola{
+  min-width: 100%;
+  text-align: center;
+  font-size: 6em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: yellow;
+  }
+  .main__hola{
+    font-size: calc(1em + 12vw);
+
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    background-color: black;
+  }
+  .main__hola{
+    color: white;
+  }
+}
