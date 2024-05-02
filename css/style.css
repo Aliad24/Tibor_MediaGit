@@ -12,55 +12,77 @@
   src: url("") format("woff2"), url("") format("woff");
 }
 
-/* ******************************** */
+:root {
+  /* ******************************** */
+  /* Colores */
+  /* ******************************** */
+  --bgcolor-red: rgb(247, 13, 13);
+  --bgcolor-yellow: rgb(220, 233, 40);
+  --bgcolor-black: rgb(24, 24, 24);
+  --fontcolor-white: rgb(255, 244, 244);
+  /* ******************************** */
+  /* Screen sizes */
+  /* ******************************** */
+  --screen-desktop: 1080px;
+  --screen-tablet: 600px;
+  /* --screen-mobile: 0px;  */
+  /* ******************************** */
+  /* FONTS */
+  /* ******************************** */
+  --font-primary: Arial, Helvetica, sans-serif;
+  --font-secondary: "Times New Roman", Times, serif;
 
-/* Colores */
-
-/* ******************************** */
-html{
+}
+html {
   font-size: 100%;
 }
 body {
-  background-color: red;
+  background-color: var(--bgcolor-red);
+  font-family: var(--font-primary);
 }
-header,footer{
+header,
+footer {
   height: 10%;
 }
-.bodywrapper{
+.bodywrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
-main{
+}
+
+main {
   display: flex;
   /* justify-content: center; */
   align-items: center;
   flex-grow: 1;
 }
-.main__hola{
+.main__hola {
   min-width: 100%;
   text-align: center;
-  font-size: 6em;
-  font-family: Arial, Helvetica, sans-serif;
+  /* Font size dynamically changed by screen size */
+  font-size: calc(1em + 12vw);
+  font-family: var(--font-secondary);
+  color: var(--fontcolor-white);
+  font-weight: 600;
 }
 
 @media screen and (min-width: 600px) {
   body {
-    background-color: yellow;
+    background-color: var(--bgcolor-yellow);
   }
-  .main__hola{
-    font-size: calc(1em + 12vw);
-
+  .main__hola {
+    color: var(--fontcolor-white);
+    font-family: var(--font-primary);
   }
 }
 
 @media screen and (min-width: 1080px) {
   body {
-    background-color: black;
+    background-color: var(--bgcolor-black);
   }
-  .main__hola{
-    color: white;
+  .main__hola {
+    color: var(--fontcolor-white);
   }
 }
